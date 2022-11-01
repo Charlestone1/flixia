@@ -1,0 +1,77 @@
+.formInput {
+    height: 3.2rem;
+    width: 96%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem 0;
+    /* border: 1px solid green; */
+    /* background-color: aqua; */
+}
+
+.singleInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 96%;
+    /* border: 1px solid pink; */
+}
+
+.label-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 96%;
+    padding: 3px 0;
+}
+
+input {
+    padding: 15px;
+    text-indent: 0.8rem;
+    width: 90%;
+    outline: none;
+    border-radius: 30px;
+    border: none;
+    color: #fff;
+    background-color: #07101f;
+    caret-color: #61dafb;
+
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0px 1000px #07101f inset;
+}
+
+
+label {
+    font-size: 12px;
+    color: gray;
+}
+
+.errorMsg {
+    font-size: 12px;
+    padding: 3px;
+    color: red;
+    display: none;
+}
+
+input:invalid[focused="true"] {
+    border-bottom: 3px solid red;
+}
+
+input:valid[focused="true"] {
+    border-bottom: 3px solid green;
+}
+
+input:valid[focused="false"] {
+    border: none;
+}
+
+input:invalid[focused="true"]~span {
+    display: block;
+}
