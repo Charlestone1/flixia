@@ -53,6 +53,13 @@ const SectionTitle = styled.h2`
     height: 1px;
     margin-left: 20px;
     background-color: ${(props) => props.theme.slate};
+
+    @media (max-width: 64em) {
+      width: 60%;
+    }
+    @media (max-width: 48em) {
+      width: 50%;
+    }
   }
 `;
 
