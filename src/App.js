@@ -3,7 +3,7 @@ import GlobalStyles from "./stlyes/GlobalStyles";
 import { ThemeProvider } from "styled-components";
 import { light } from "../src/stlyes/Themes";
 
-import { BrowserRouter as Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //
 import Home from "./pages/Home";
 import SignIn from "./pages/SignIn";
