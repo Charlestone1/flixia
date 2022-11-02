@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Link as LinkRouter } from "react-router-dom";
-import { Link as LinkScroll } from "react-scroll";
 import LogoImage from "../assets/images/flixialogo.png";
 
 const LogoContainer = styled(LinkRouter)`
@@ -21,14 +20,6 @@ const LogoContainer = styled(LinkRouter)`
     border-radius: 10px;
   }
 `;
-// const Container = styled.div`
-//   width: 100px;
-//   height: 75px;
-//   transition: all 0.2s ease;
-//   &:hover {
-//     transform: scale(1.1);
-//   }
-// `;
 
 const Logo = () => {
   return (

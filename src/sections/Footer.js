@@ -75,7 +75,7 @@ const FooterLink = styled(Link)`
   }
 `;
 
-const SocialMedia = styled.section`
+const SocialMedia = styled.div`
   max-width: 1000px;
   width: 100%;
 `;
@@ -90,7 +90,7 @@ const SocialMediaWrapper = styled.div`
     flex-direction: column;
   }
 `;
-const SocialLogo = styled(Link)`
+const SocialLogo = styled.div`
   color: #fff;
   justify-self: start;
   cursor: pointer;
@@ -165,7 +165,7 @@ const Footer = () => {
         </FooterLinksContainer>
         <SocialMedia>
           <SocialMediaWrapper>
-            <SocialLogo to="/home" onClick={toggleHome}>
+            <SocialLogo>
               <Logo />
             </SocialLogo>
             <WebsiteRights>

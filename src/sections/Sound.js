@@ -11,6 +11,7 @@ const Container = styled.section`
   justify-content: center;
   align-items: center;
   background: ${(props) => props.theme.body};
+  overflow: auto;
 `;
 
 const SectionTitle = styled.div`
@@ -34,11 +35,16 @@ const SectionContainer = styled.div`
   width: 80%;
 `;
 const Box = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  min-height: 80vh;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between;
+
+  @media (max-width: 64em) {
+    grid-template-columns: auto auto;
+  }
+  @media (max-width: 48em) {
+    grid-template-columns: auto;
+  }
 `;
 
 const Sound = () => {

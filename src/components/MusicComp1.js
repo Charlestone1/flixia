@@ -6,8 +6,8 @@ const MusicComponent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 16%;
-  height: 250px;
+  width: 11.25rem;
+  height: 15.63rem;
   background-color: ${(props) => props.theme.body};
   color: ${(props) => props.theme.slate};
   border-radius: 6px;
@@ -15,7 +15,8 @@ const MusicComponent = styled.div`
 `;
 const ImageContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   width: 80%;
   height: 9.4rem;
@@ -35,14 +36,28 @@ const Artist = styled.h5`
   font-size: ${(props) => props.theme.fontmd};
   color: ${(props) => props.theme.slate};
   padding: 1rem 0;
+
+  @media (max-width: 50em) {
+    font-size: ${(props) => props.theme.fontsm};
+    padding: 0.7rem 0;
+  }
+  @media (max-width: 48em) {
+    font-size: ${(props) => props.theme.fontxs};
+    padding: 0.5rem 0;
+  }
 `;
 const SongTitle = styled.p`
   font-size: ${(props) => props.theme.fontsm};
   color: ${(props) => props.theme.slate};
+  padding-bottom: 0.4rem;
+
+  @media (max-width: 50em) {
+    font-size: ${(props) => props.theme.fontxs};
+  }
 `;
 
 const MusicComp1 = (props) => {
-  const { id, artist, title, imgSrc } = props.music1;
+  const { artist, title, imgSrc } = props.music1;
   return (
     <MusicComponent>
       <ImageContainer>

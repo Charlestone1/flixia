@@ -5,11 +5,15 @@ import { FaCheck } from "react-icons/fa";
 const PlanComponent = styled.div`
   display: flex;
   flex-direction: column;
-  width: 32%;
-  /* border: 1px solid slateblue; */
+  width: 15.63rem;
   background-color: ${(props) => props.theme.body};
   color: ${(props) => props.theme.textYellow};
   border-radius: 10px;
+  margin: 1rem;
+
+  @media (max-width: 48em) {
+    width: 18.63rem;
+  }
 `;
 const Title = styled.h3`
   font-size: ${(props) => props.theme.fontxl};
@@ -83,7 +87,7 @@ const StartTrial = styled.a`
 `;
 
 const PlansComp = (props) => {
-  const { id, title, desc, cost, access } = props.plan;
+  const { title, desc, cost, access } = props.plan;
   return (
     <PlanComponent>
       <Title>{title}</Title>

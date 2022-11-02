@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import Button from "../components/Button";
 import { FaUserAlt } from "react-icons/fa";
 import Logo from "../components/Logo";
 import { Link as LinkRouter } from "react-router-dom";
-import { Link as LinkScroll } from "react-scroll";
+// import { Link as LinkScroll } from "react-scroll";
 
 const Section = styled.section`
   width: 100vw;
@@ -62,19 +61,19 @@ const Menu = styled.ul`
   }
 `;
 
-const LogoContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 140px;
-  height: 50px;
+// const LogoContainer = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 140px;
+//   height: 50px;
 
-  img {
-    width: 100%;
-    height: 50px;
-    border-radius: 10px;
-  }
-`;
+//   img {
+//     width: 100%;
+//     height: 50px;
+//     border-radius: 10px;
+//   }
+// `;
 
 const MenuItem = styled.li`
   margin: 0 1rem;

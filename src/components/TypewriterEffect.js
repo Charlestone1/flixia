@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Typewriter from "typewriter-effect";
-import Button from "./Button";
 
 const Title = styled.h2`
   font-size: ${(props) => props.theme.fontxxxl};
@@ -74,7 +73,57 @@ const ButtonContainer = styled.div`
   }
 `;
 
+const Btn = styled.span`
+  display: inline-block;
+  background-color: ${(props) => props.theme.textYellow};
+  color: ${(props) => props.theme.body};
+  outline: none;
+  border: none;
+
+  font-size: ${(props) => props.theme.fontmd};
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+
+  margin-right: 1.5rem;
+
+  &:hover {
+    transform: scale(0.9);
+  }
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border: 2px solid ${(props) => props.theme.textYellow};
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+  }
+  &:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    padding: 0.3rem;
+  }
+`;
+
 const TypewriterEffect = () => {
+  const [click, setClick] = useState(false);
+
+  const scrollTo = (id) => {
+    let element = document.getElementById(id);
+
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
+
+    setClick(!click);
+  };
   return (
     <>
       <Title>
@@ -97,8 +146,8 @@ const TypewriterEffect = () => {
         />
       </Title>
       <SubTitle>A streaming service for all music fans.</SubTitle>
-      <ButtonContainer>
-        <Button text="Start Free Trial" link="#about" />
+      <ButtonContainer click={click}>
+        <Btn onClick={() => scrollTo("plans")}>Start Free Trial</Btn>
       </ButtonContainer>
     </>
   );

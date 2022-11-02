@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { keyframes } from "styled-components";
+// import { keyframes } from "styled-components";
 import TypewriterEffect from "../components/TypewriterEffect";
 import Loudmusic from "../assets/images/LoudMusic.png";
 
@@ -25,7 +25,7 @@ const Container = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-height: 60vh;
+    min-height: 50vh;
   }
 
   @media (max-width: 64em) {
@@ -37,11 +37,12 @@ const Container = styled.div`
 
     & > *:first-child {
       width: 100%;
-      margin-top: 2rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
     & > *:last-child {
       width: 100%;
-      margin-top: 2rem;
+      margin-top: 1rem;
     }
   }
 `;
