@@ -122,9 +122,9 @@ const SocialIconLink = styled.a`
 `;
 
 const Footer = () => {
-  const toggleHome = () => {
-    scroll.scrollToTop();
-  };
+  // const toggleHome = () => {
+  //   scroll.scrollToTop();
+  // };
   return (
     <FooterContainer id="footer">
       <FooterWrapper>
